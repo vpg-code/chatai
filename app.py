@@ -25,7 +25,7 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/get")
+@app.route("/get", methods=['GET'])
 def get_bot_response():
     query = request.args.get('msg')
     query = [spell(w) for w in (query.split())]
