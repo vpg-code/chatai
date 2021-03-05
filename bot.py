@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import os
 import aiml
 from autocorrect import spell
+import time
+import random
 
 app = Flask(__name__)
 
@@ -30,6 +32,7 @@ def get_bot_response():
     question = " ".join(query)
     response = k.respond(question)
     if response:
+        time.sleep(random.randint(1, 3))
         return (str(response))
     else:
         return (str(":)"))
