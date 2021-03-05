@@ -4,8 +4,10 @@ import aiml
 from autocorrect import spell
 import time
 import random
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 BRAIN_FILE="./pretrained_model/aiml_pretrained_model.dump"
 k = aiml.Kernel()
