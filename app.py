@@ -30,7 +30,6 @@ def home():
 @app.route("/get", methods=['GET'])
 def get_bot_response():
     query = request.args.get('msg')
-    query = [spell(w) for w in (query.split())]
     question = " ".join(query)
     response = k.respond(question)
     if response:
