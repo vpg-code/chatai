@@ -34,7 +34,7 @@ def get_bot_response():
     question = " ".join(query)
     response = k.respond(question)
     if response:
-        time.sleep(random.randint(1, 3))
+        time.sleep(1)
         return (str(response))
     else:
         return (str(":)"))
